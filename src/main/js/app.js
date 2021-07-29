@@ -13,6 +13,7 @@ const client = rest.wrap(mime);
 import PlayerList from "./components/player"
 import Property from "./components/property";
 import Header from "./components/header";
+import Home from "./components/home";
 
 class App extends React.Component {
     constructor(props) {
@@ -38,7 +39,7 @@ class App extends React.Component {
                         <Property />
                     </Route>
                     <Route path="/">
-                        <PlayerList players={this.state.players} />
+                        <Home/>
                     </Route>
                 </Switch>
             </div>

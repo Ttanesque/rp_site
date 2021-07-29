@@ -1,4 +1,4 @@
-package fr.ttanesque.rp_site;
+package fr.ttanesque.rp_site.entity;
 
 import java.util.Objects;
 
@@ -8,12 +8,20 @@ import javax.persistence.Id;
 
 @Entity
 public class Player {
+    /**
+     * Primary key.
+     */
     private @Id @GeneratedValue Long id;
     private String firstName;
     private String lastName;
 
     public Player() {}
 
+    /**
+     * Basic player constructor.
+     * @param firstName
+     * @param lastName
+     */
     public Player(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
