@@ -2,7 +2,7 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    background-color: crimson;
+    background-color: rgb(201, 68, 94);
 }
 
 .menu .logo {
@@ -22,6 +22,10 @@
 .menu li {
     text-decoration: none;
     padding: 1rem 0.8rem; 
+}
+
+.menu li:hover {
+    opacity: 0.2;
 }
 
 .menu a {

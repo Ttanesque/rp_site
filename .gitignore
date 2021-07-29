@@ -31,4 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
-node_modules
+
+
+node_modules/
+src/main/resources/application.properties
+src/main/resources/static/built/

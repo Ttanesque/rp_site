@@ -31,6 +31,9 @@ class App extends React.Component {
             <div id="body">
                 <Header/>
                 <Switch>
+                    <Route path="/player">
+                        <PlayerList players={this.state.players} />
+                    </Route>
                     <Route path="/help">
                         <Property />
                     </Route>
