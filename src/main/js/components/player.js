@@ -1,4 +1,6 @@
 const React = require('react');
+import { Table } from 'react-bootstrap';
+
 
 export default class PlayerList extends React.Component {
     render() {
@@ -6,15 +8,17 @@ export default class PlayerList extends React.Component {
             <Player key={player._links.self.href} player={player} />
         );
         return (
-            <table>
-                <tbody>
-                    <tr>
-                        <th>first name</th>
-                        <th>last name</th>
-                    </tr>
-                    {players}
-                </tbody>
-            </table>
+                <Table striped bordered hover>
+                    <thead>
+                        <tr>
+                            <th>first name</th>
+                            <th>last name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {players}
+                    </tbody>
+                </Table>
         );
     }
 }

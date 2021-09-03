@@ -5,6 +5,7 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
+import {Container} from "react-bootstrap"
 // request
 const rest = require('rest');
 const mime = require('rest/interceptor/mime');
@@ -13,6 +14,7 @@ const client = rest.wrap(mime);
 import PlayerList from "./components/player"
 import Property from "./components/property";
 import Header from "./components/header";
+import News from "./components/news";
 import Home from "./components/home";
 
 class App extends React.Component {
@@ -30,18 +32,23 @@ class App extends React.Component {
     render() {
         return (
             <div id="body">
-                <Header/>
-                <Switch>
-                    <Route path="/player">
-                        <PlayerList players={this.state.players} />
-                    </Route>
-                    <Route path="/help">
-                        <Property />
-                    </Route>
-                    <Route path="/">
-                        <Home/>
-                    </Route>
-                </Switch>
+                <Header />
+                <main><Container>
+                    <Switch>
+                        <Route path="/player">
+                            <PlayerList players={this.state.players} />
+                        </Route>
+                        <Route path="/actualite">
+                            <News />
+                        </Route>
+                        <Route path="/help">
+                            <Property />
+                        </Route>
+                        <Route path="/">
+                            <Home />
+                        </Route>
+                    </Switch>
+                </Container></main>
             </div>
         )
     }

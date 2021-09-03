@@ -2,6 +2,7 @@ package fr.ttanesque.rp_site.entity;
 
 import java.util.Objects;
 
+import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -11,8 +12,11 @@ public class Player {
     /**
      * Primary key.
      */
-    private @Id @GeneratedValue Long id;
+    @Id @GeneratedValue
+    private Long id;
+    @Basic(optional = false)
     private String firstName;
+    @Basic(optional = false)
     private String lastName;
 
     public Player() {}

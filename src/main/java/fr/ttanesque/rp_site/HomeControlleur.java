@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeControlleur {
 
-    @RequestMapping(value = "/")
+    @RequestMapping({"/", "/player", "/actualite", "/help"})
     public String index() {
         return "index";
     }
